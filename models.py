@@ -1,4 +1,5 @@
 import torch.nn as nn
+import torch
 
 class RB(nn.Module):
     def __init__(self,in_channels):
@@ -47,9 +48,10 @@ class PPN(nn.Module):
     
     def predict(self, x, t):
         # input data and designate t times of recursion for predicting desired depth QAOA. 
-        for _ in range(t):
-            x = self.act(self.us2(self.act(self.us1(x))))
-            for i in range(self.D):
-                x = self.RBs_list[i](x)
-            x = self.ds(x)
+        with torch.no_grad():
+            for _ in range(t):
+                x = self.act(self.us2(self.act(self.us1(x))))
+                for i in range(self.D):
+                    x = self.RBs_list[i](x)
+                x = self.ds(x)
         return x
