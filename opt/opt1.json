@@ -1,0 +1,17 @@
+{
+    "D": 4,
+
+    "device": "cuda:0",
+    "epoch": 3000,
+    "batch_size": 11,
+    "learning_rate": 1e-5,
+
+    "ps": 1,
+    "pt": 5,
+    "graph_seeds_path": "./problem_graphs/ProblemSet1.json",
+    "data_folder": "./training_data/",
+
+    "tmp_folder": "./tmp_models/",
+    "save_folder": "./models/",
+    "name": "PPN_for_Set1"
+}
