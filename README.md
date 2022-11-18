@@ -1,5 +1,5 @@
 # Parameter-to-Parameter-Convolutional-Neural-Network
-This repository is implementation of the "Quantum Approximate Optimization Algorithm Parameter Prediction Using a Convolutional Neural Network"
+This repository is implementation of the ["Quantum Approximate Optimization Algorithm Parameter Prediction Using a Convolutional Neural Network"](https://arxiv.org/abs/2211.09513)
 
 ## Introduction
 We propose a CNN model named PPN to learn mappings between parameters from different depths QAOA.  
